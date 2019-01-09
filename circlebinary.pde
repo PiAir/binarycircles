@@ -41,7 +41,7 @@ void draw() {
 void circles(int number) {             //circle draw function
   String binair=binary(number, bits);  // mmake a string of the binary amount
   float xc=(number-floor(number/side)*side)*(linespace*bits+circlespace)+0.5*linespace*bits+circlespace; // x-coordinate of the circle's center
-  float yc=floor(number/(side))*(linespace*bits+circlespace)+0.5*linespace*bits+circlespace;             // y-coordinaat
+  float yc=floor(number/(side))*(linespace*bits+circlespace)+0.5*linespace*bits+circlespace;             // y-coordinate
   noFill();                            // draw circles but don't fill them
   stroke(0);                           // default = no line
   for (int i=0; i<bits; i++) {         // every bit
