@@ -37,7 +37,7 @@ void draw() {
     circles(i);                        // draw amount of circles
   }
 }
-
+ 
 void circles(int number) {             //circle draw function
   String binair=binary(number, bits);  // mmake a string of the binary amount
   float xc=(number-floor(number/side)*side)*(linespace*bits+circlespace)+0.5*linespace*bits+circlespace; // x-coordinate of the circle's center
