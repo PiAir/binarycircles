@@ -15,7 +15,7 @@ You have to use very fine pencils to see the seperate circles if you want to use
 By Arjan van der Meij. http://www.plakkenenknippen.nl; twitter: @arjanvandermeij.
 
 --
-Forked to add multiple colors. 
+Pierre: Forked it to add multiple colors and re-share (but all credits to Arjan for the initial code). 
 I want to test the result on a Silhouette Cameo 3 (haven't been able to test the result yet).
 That should enable me to use 2 colors instead of just one.
 Was fun excercise to figure out where to add the code to make a bit position always have the same color (blue / red in my case).
