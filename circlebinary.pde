@@ -14,6 +14,8 @@ You have to use very fine pencils to see the seperate circles if you want to use
 
 By Arjan van der Meij. http://www.plakkenenknippen.nl; twitter: @arjanvandermeij.
 
+Changes to add 2 color mode added by Pierre Gorissen. http://ictoblog.nl; twitter @petermcallister.
+
 */
 
 import processing.svg.*;               // library for SVG export
@@ -23,6 +25,9 @@ float amount=pow(2,bits);              // amount of possible number
 int circlespace=2;                     // space between circles
 float side= sqrt(amount);              // how many circles on one side
 int linespace = 4;                     // distanve between lines in circle
+color cC = #000000;                    // set intial color to black
+color cA = #FF0000;                    // first alternating color
+color cB = #0000FF;                    // second alternating color
 
 void setup() {
   size(546, 546, SVG, "circle01.svg"); // if you want to make it fit: side*(bits*linespace+circlespace)+circlespace, SVG to save
@@ -44,8 +49,11 @@ void circles(int number) {             //circle draw function
   float yc=floor(number/(side))*(linespace*bits+circlespace)+0.5*linespace*bits+circlespace;             // y-coordinate
   noFill();                            // draw circles but don't fill them
   stroke(0);                           // default = no line
+  cC = cB;
   for (int i=0; i<bits; i++) {         // every bit
     char position = binair.charAt(i);  // check whether position i of the string holds a "0" or a "1"
+    cC = (cC == cA) ? cB : cA;        // alternate between the two colors
+    stroke(cC);                       // set the stroke color
     if (position=='1') {               // if it is a "1" is, draw a circle (and otherwise don't
      ellipse(xc,yc,bits*linespace-linespace*i, bits*linespace-linespace*i); // draw the circle
      } 
