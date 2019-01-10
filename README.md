@@ -20,5 +20,5 @@ I want to test the result on a Silhouette Cameo 3 (haven't been able to test the
 That should enable me to use 2 colors instead of just one.
 Was fun excercise to figure out where to add the code to make a bit position always have the same color (blue / red in my case).
 
-![Screenshot 2 color](github.com/PiAir/binarycircles/blob/master/circle2color.png)
+![Screenshot 2 color](https://raw.githubusercontent.com/PiAir/binarycircles/master/circle2color.png)
 
